@@ -1,0 +1,10 @@
+name: 'nags'
+backbone:
+  input_dim: 2
+  stage_dim: [64, 128, 256, 512] # [64, 128, 256, 512]
+  heads_dim: 16
+  act_layer: 'sinlu'
+graph:
+  score_thres: 0.5
+  # Dense Hungarian matching is bounded to prevent unbounded CPU memory/runtime.
+  max_exact_nodes: 1024

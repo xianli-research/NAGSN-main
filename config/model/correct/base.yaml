@@ -1,0 +1,8 @@
+backbone:
+  blk_num: 6
+  stage_dim: 8
+  hidden_dim: 16
+
+# Fixed coordinate-system scale.  The value 2.0 preserves the normalization
+# used by correction checkpoints produced before the public release refactor.
+normalization_scale: 2.0

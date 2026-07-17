@@ -1,0 +1,20 @@
+init:
+  alpha: 0.5
+  bright_noise: 0.05
+  edge_thres:
+    high: 0.1
+    low: 0.05
+  edge_weight: false
+  sigma: 1.0
+divide:
+  star_num_blk: 512
+  max_points: 600
+  bound: 32
+augmentation:
+  distort_prob: 0.6
+  rotation:
+    prob: 0.9
+    theta: [0,180]
+  scaling: 0.1
+validation:
+  coordinate_tolerance: 2.0

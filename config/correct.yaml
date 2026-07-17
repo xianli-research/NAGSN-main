@@ -1,0 +1,56 @@
+defaults:
+  - _self_
+  - general
+  - model/correct: base
+  - dataset: distortion
+  - loss: huber
+train:
+  ckpt_path: null
+  learning_rate: 0.002
+  limit_batches: 1.0
+  log_every_n_steps: 10
+  precision: 32
+  max_epochs: 20000
+  max_steps: 800000
+  batch_size: 1024
+  num_workers: 4
+  shuffle: true
+  pin_memory: true
+  persistent_workers: true
+  wipe_ratio: [0.0,0.05]
+  lr_scheduler:
+    is_open: true
+    min_lr: 5e-5
+    threshold: 0.2
+    factor: 0.8
+    patience: 1
+    monitor: 'error_max'
+    interval: 'epoch'
+    frequency: 400
+val:
+  check_interval: null
+  check_every_n_epoch: 5
+  limit_batches: 1.0
+  batch_size: 2048
+  num_workers: 4
+  shuffle: false
+  pin_memory: true
+  persistent_workers: true
+test:
+  ckpt_path: null
+  batch_size: 2048
+  num_workers: 8
+  shuffle: false
+  pin_memory: true
+  persistent_workers: true
+checkpoint:
+  dirpath: ckpts/correct
+  monitor: error_max
+  mode: min
+checkpoint_dir: ckpts/test/correct
+checkpoint_template: "{image_size}_{level}.ckpt"
+adapt:
+  train_ratio: 0.9
+data_path: null
+logger:
+  name: 'correct'

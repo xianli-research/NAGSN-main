@@ -1,0 +1,4 @@
+name: infonce
+parameters:
+  temperature: 0.025
+  trainable_temperature: False

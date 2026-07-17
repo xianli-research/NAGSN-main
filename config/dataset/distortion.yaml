@@ -1,0 +1,5 @@
+augmentation:
+  noise_ratio: 0.15
+  perturb_std: 0.0
+validation:
+  coordinate_tolerance: 2.0

@@ -1,0 +1,12 @@
+hardware:
+  gpus: 0
+  dist_backend: 'nccl'
+logger:
+  default_root: '~/logs'
+  name: ???
+  version: null
+  project: identification
+  log_graph: false
+reproduce:
+  is_open: false
+  seed: 42
