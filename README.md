@@ -11,14 +11,14 @@ distributed separately as the precompiled `nagsn-runtime` wheel.
 
 ## Environment
 
-The reference environment uses Python 3.9, PyTorch 2.0.0, and CUDA 11.8.
+The reference environment uses Python 3.9, PyTorch 2.0.0, and CUDA 11.7.
 
 ```bash
 conda create -n nags python=3.9 pip -y
 conda activate nags
 python -m pip install --upgrade pip
-python -m pip install torch==2.0.0+cu118 \
-  --index-url https://download.pytorch.org/whl/cu118
+python -m pip install torch==2.0.0+cu117 \
+  --index-url https://download.pytorch.org/whl/cu117
 python -m pip install -r requirements.txt
 ```
 

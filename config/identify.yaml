@@ -5,7 +5,7 @@ defaults:
   - correct@correct
 
 data_path: ???
-batch_size: 64
+batch_size: 8
 num_workers_data: 8
 num_workers_process: 6
 resume:
